@@ -1,0 +1,8 @@
+{
+    "version": "0.0.0",
+    "name": "shower-react-flux",
+    "author": "Robert Katzki",
+    "dependencies": {
+      "gulp": "~3.6.2"
+    }
+}
