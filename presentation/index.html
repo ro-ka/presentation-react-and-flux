@@ -16,9 +16,61 @@
       .slide.shout {
         background: #3bafda;
       }
+      .slide.shout.shout--white {
+        background: #fff;
+      }
+      .slide.shout.shout--intro, .slide.cover.cover--intro {
+        background: #1A6B89;
+        background-image: url('images/intro.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .slide.shout.shout--react, .slide.cover.cover--react {
+        background: #1A6B89;
+        background-image: url('images/react.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .slide.cover.cover--react h2, .slide.cover.cover--flux h2 {
+        font-family: "Playfair Display", serif;
+        margin: 0 0 0;
+        color: #FFF;
+        text-align: center;
+        font-size: 4em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+      }
+      .slide.shout.shout--flux, .slide.cover.cover--flux {
+        background: #206F5B;
+        background-image: url('images/flux.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
       .slide.shout h2 {
         font-size: 3em;
-        text-align: center;
+        /*text-align: center;*/
+      }
+      .slide.shout h3 {
+        font-size: 1.75em;
+        /*text-align: center;*/
+        color: #fff;
+        position: absolute;
+        bottom: 20%;
+        left: 128px;
+        right: 96px;
+      }
+      .list {
+        background-color: #fff;
+        text-align: left;
+      }
+      ul, ol {
+        font-size: 1.333em;
       }
     </style>
   </head>
@@ -29,12 +81,12 @@
 
       <p>By <a href="http://katzki.de/">Robert Katzki</a></p>
     </header>
-    <section class="slide cover" id="Cover">
+    <section class="slide cover cover--intro" id="Cover">
       <div>
         <h2>React &amp; Flux</h2>
 
         <p>by <a href="http://katzki.de">Robert Katzki</a></p>
-        <img src="images/water.jpg" alt="">
+        <!-- <img src="images/intro.jpg" alt=""> -->
         <style>
         #Cover h2 {
           font-family: "Playfair Display", serif;
@@ -43,7 +95,7 @@
           text-align: center;
           font-size: 4em;
           position: absolute;
-          top: 50%;
+          top: 25%;
           left: 50%;
           transform: translate(-50%, -50%);
           white-space: nowrap;
@@ -64,16 +116,11 @@
         </style>
       </div>
     </section>
-    <section class="slide shout" id="Roka">
-      <div>
-        <h2>@RobertKatzki</h2>
-      </div>
-      </style>
+    <section class="slide shout shout--intro">
+      <div><h2>@RobertKatzki</h2></div>
     </section>
     <section class="slide cover" id="Ubilabs">
-      <div>
-        <img src="images/ubilabs.svg" alt="Ubilabs" >
-      </div>
+      <div><img src="images/ubilabs.svg" alt="Ubilabs" ></div>
       <style type="text/css" media="screen">
         #Ubilabs {
           background-color: #fff;
@@ -87,33 +134,50 @@
         }
       </style>
     </section>
-    <section class="slide cover" id="React">
+    <section class="slide cover cover--react">
+      <div><h2>React</h2></div>
+    </section>
+    <section class="slide shout shout--react">
+      <div><h2>developed by Facebook</h2></div>
+    </section>
+    <section class="slide shout shout--react">
       <div>
-        <h2>React</h2>
-        <img src="images/water.jpg" alt="">
-        <style>
-        #React h2 {
-          font-family: "Playfair Display", serif;
-          margin: 0 0 0;
-          color: #FFF;
-          text-align: center;
-          font-size: 4em;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          white-space: nowrap;
-        }
-        </style>
+        <h2>React is the V in MVC</h2>
+        <h3 class="next">Use whatever framework you like</h3>
       </div>
     </section>
-    <section class="slide shout" id="ReactComponents">
+    <section class="slide shout shout--react">
+      <div><h2>Everything is a component</h2></div>
+    </section>
+    <section class="slide">
+      <div>
+
+      </div>
+    </section>
+    <section class="slide list">
+      <div>
+        <h2>Safe to use?</h2>
+        <h2 class="next">It's been battle tested at:</h2>
+        <ul>
+          <li class="next">Instagram web</li>
+          <li class="next">Facebook (some parts)</li>
+          <li class="next">Atom editor</li>
+          <li class="next">Yahoo Mail</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
       <div>
         <h2>
           <a href="http://react-components.com/" title="React components">
             react-components.com
           </a>
         </h2>
+      </div>
+    </section>
+    <section class="slide cover cover--flux">
+      <div>
+        <h2>Flux</h2>
       </div>
     </section>
 
