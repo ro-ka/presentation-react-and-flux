@@ -63,6 +63,9 @@
       .slide.shout h2 {
         font-size: 3em;
       }
+      .slide.shout a {
+        color: #fff;
+      }
       .slide.shout h3, .slide.cover h3 {
         font-size: 1.75em;
         line-height: 1;
@@ -144,11 +147,8 @@
     <section class="slide cover cover--react">
       <div>
         <h2>React</h2>
-        <h3><a href="https://facebook.github.io/react/" title="React">facebook.github.io/react/</a></h3>
+        <h3 class="next"><a href="https://facebook.github.io/react/" title="React">facebook.github.io/react/</a></h3>
       </div>
-    </section>
-    <section class="slide shout shout--react">
-      <div><h2>developed by Facebook</h2></div>
     </section>
     <section class="slide shout shout--react">
       <div>
@@ -267,7 +267,7 @@
     </section>
     <section class="slide shout shout--react">
       <div>
-        <h2>Introducing: JSX</h2>
+        <h2>Introducing:<br>JSX</h2>
         <h3>It is not required.</h3>
       </div>
     </section>
@@ -407,10 +407,62 @@
     <section class="slide cover cover--flux">
       <div>
         <h2>Flux</h2>
+        <h3 class="next"><a href="https://facebook.github.io/flux/" title="Flux">facebook.github.io/flux/</a></h3>
       </div>
     </section>
     <section class="slide shout shout--flux">
-      <div><h2>It's not a framework.<br>It's a concept.</h2></div>
+      <div><h2>It's not a framework.<br><span class="next">It's a pattern.</span></h2></div>
+    </section>
+    <section class="slide shout shout--flux">
+      <div><h2>Complements React</h2></div>
+    </section>
+    <section class="slide shout shout--flux">
+      <div><h2>Unidirectional data flow</h2></div>
+    </section>
+    <section class="slide cover flux-schema">
+      <div>
+        <img src="images/flux-schema-1.svg" alt="">
+      </div>
+      <style type="text/css" media="screen">
+        .slide.cover.flux-schema {
+          background: #fff;
+        }
+        .slide.cover.flux-schema img {
+          height: 90%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      </style>
+    </section>
+    <section class="slide cover flux-schema">
+      <div><img src="images/flux-schema-2.svg" alt=""></div>
+    </section>
+    <section class="slide cover flux-schema">
+      <div><img src="images/flux-schema-3.svg" alt=""></div>
+    </section>
+    <section class="slide cover flux-schema">
+      <div><img src="images/flux-schema-4.svg" alt=""></div>
+    </section>
+    <section class="slide cover flux-schema">
+      <div><img src="images/flux-schema-5.svg" alt=""></div>
+    </section>
+    <section class="slide cover flux-schema">
+      <div><img src="images/flux-schema-6.svg" alt=""></div>
+    </section>
+    <section class="slide cover flux-schema">
+      <div><img src="images/flux-schema-complete.svg" alt=""></div>
+    </section>
+    <section class="slide shout shout--flux">
+      <div>
+        <h2>Implementations</h2>
+        <h3>
+          <span class="next"><a href="http://deloreanjs.com/" title="Delorean.js">deloreanjs.com</a></span>
+          <br>
+          <span class="next"><a href="https://github.com/spoike/refluxjs" title="Reflux">github.com/spoike/refluxjs</a></span>
+        </h3>
+      </div>
     </section>
 
     <!--  build:YEOMAN-GENERATOR-PLACEHOLDER -->

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 239 417.333" preserveAspectRatio='xMidYMid meet'>
+  <g>
+    <rect x="3.833" y="273.165" fill="#48CFAD" stroke="#37BC9B" stroke-miterlimit="10" width="150" height="50" />
+    <text transform="matrix(1 0 0 1 52.4209 305.165)" fill="#FFFFFF" font-family="'Lato'" font-size="24">Store</text>
+  </g>
+  <g>
+    <rect x="3.833" y="183.165" fill="#656D78" stroke="#434A54" stroke-miterlimit="10" width="150" height="50" />
+    <text transform="matrix(1 0 0 1 24.7256 215.665)" fill="#FFFFFF" font-family="'Lato'" font-size="24">Dispatcher</text>
+  </g>
+  <g>
+    <rect x="3.833" y="93.165" fill="#5D9CEC" stroke="#4A89DC" stroke-miterlimit="10" width="150" height="50" />
+    <text transform="matrix(1 0 0 1 46.085 125.165)" fill="#FFFFFF" font-family="'Lato'" font-size="24">Action</text>
+  </g>
+  <g>
+    <line fill="#AC92EC" x1="78.333" y1="143.665" x2="78.333" y2="182.665" />
+    <g>
+      <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="78.833" y1="143.665" x2="78.833" y2="176.665" />
+      <g>
+        <path d="M78.833,182.665c-1.054-2.84-2.852-6.363-4.756-8.547l4.756,1.72l4.755-1.72
+        C81.683,176.302,79.885,179.825,78.833,182.665z" />
+      </g>
+    </g>
+  </g>
+  <g>
+    <line fill="#AC92EC" x1="78.333" y1="233.665" x2="78.333" y2="272.665" />
+    <g>
+      <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="78.833" y1="233.665" x2="78.833" y2="266.665" />
+      <g>
+        <path d="M78.833,272.665c-1.054-2.84-2.852-6.363-4.756-8.547l4.756,1.72l4.755-1.72
+        C81.683,266.302,79.885,269.825,78.833,272.665z" />
+      </g>
+    </g>
+  </g>
+</svg>
