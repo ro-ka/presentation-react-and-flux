@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=792, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="bower_components/shower-bright/styles/screen.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic|Playfair+Display' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="bower_components/shower-bright/styles/screen.css">
+    <style>
+      body, .slide h2 {
+        font-family: "Lato", sans-serif;
+      }
+      .slide.shout {
+        background: #3bafda;
+      }
+    </style>
   </head>
 
   <body class="list">
@@ -21,15 +29,20 @@
       <div>
         <h2>React &amp; Flux</h2>
 
-        <p>Brought to you by <a href="http://katzki.de">Robert Katzki</a></p>
+        <p>by <a href="http://katzki.de">Robert Katzki</a></p>
         <img src="images/water.jpg" alt="">
         <style>
         #Cover h2 {
           font-family: "Playfair Display", serif;
-          margin: 30px 0 0;
+          margin: 0 0 0;
           color: #FFF;
           text-align: center;
           font-size: 4em;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          white-space: nowrap;
         }
         #Cover p {
           position: absolute;
@@ -52,15 +65,12 @@
         <h2>@RobertKatzki</h2>
       </div>
       <style type="text/css" media="screen">
-        #Roka {
-          background: #fff;
-          color: #000;
-        }
         #Roka h2 {
           font-size: 3em;
           text-align: center;
         }
       </style>
+    </section>
     <section class="slide cover" id="Ubilabs">
       <div>
         <img src="images/ubilabs.svg" alt="Ubilabs" >
@@ -70,7 +80,7 @@
           background-color: #fff;
         }
         #Ubilabs img {
-          height: 70%;
+          height: 50%;
           position: absolute;
           top: 50%;
           left: 50%;
@@ -83,7 +93,7 @@
     <!--
       The line above is used by shower generator to insert slides. Please don't remove.
   -->
-    <p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a>
+    <p class="badge"><a href="https://github.com/ro-ka/presentation-react-and-flux">Fork me on Github</a>
     </p>
 
     <script src="bower_components/shower-core/shower.min.js"></script>
