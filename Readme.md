@@ -1,44 +1,20 @@
-# Presentation React & Flux
+# Presentation: React & Flux
 
-## Description
+This is a presentation by Robert Katzki.
 
-Talking about!
+## Setup
 
-### Links
+When checking out the repository, make sure to install all the needed dependencies:
 
-* Live: –
-
-## Development
-
-### Installation
-
-Make sure you have the following commands installed:
-
-```sh
-npm install bower
-```
-
-After cloning the repository, install all dependencies:
-
-```sh
+```bash
 npm install
 bower install
 ```
 
-<!-- ### Develop
+## Work on it
 
-Run the following command to start the server on localhost:
+To get start the presentation and to get live reload for each change made, run the following:
 
-```sh
-server # start the server
+```bash
+gulp watch
 ```
-
-### Deploy
-
-To deploy the application, run the following commands:
-
-```sh
-build
-deploy
-open
-``` -->
