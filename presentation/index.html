@@ -19,6 +19,9 @@
       .slide.shout.shout--white {
         background: #fff;
       }
+      .slide.shout.shout--white h2, .slide.shout.shout--white h3 {
+        color: #000;
+      }
       .slide.shout.shout--intro, .slide.cover.cover--intro {
         background: #1A6B89;
         background-image: url('images/intro.jpg');
@@ -33,10 +36,15 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
-      .slide.cover.cover--react h2, .slide.cover.cover--flux h2 {
+      .slide.cover.cover--react h2, .slide.cover.cover--flux h2,
+      .slide.cover.cover--react h3, .slide.cover.cover--flux h3,
+      .slide.cover.cover--react a, .slide.cover.cover--flux a {
         font-family: "Playfair Display", serif;
         margin: 0 0 0;
         color: #FFF;
+        text-align: center;
+      }
+      .slide.cover.cover--react h2, .slide.cover.cover--flux h2 {
         text-align: center;
         font-size: 4em;
         position: absolute;
@@ -54,14 +62,13 @@
       }
       .slide.shout h2 {
         font-size: 3em;
-        /*text-align: center;*/
       }
-      .slide.shout h3 {
+      .slide.shout h3, .slide.cover h3 {
         font-size: 1.75em;
-        /*text-align: center;*/
+        line-height: 1;
         color: #fff;
         position: absolute;
-        bottom: 20%;
+        bottom: 10%;
         left: 128px;
         right: 96px;
       }
@@ -70,7 +77,7 @@
         text-align: left;
       }
       ul, ol {
-        font-size: 1.333em;
+        font-size: 1.25em;
       }
     </style>
   </head>
@@ -135,7 +142,10 @@
       </style>
     </section>
     <section class="slide cover cover--react">
-      <div><h2>React</h2></div>
+      <div>
+        <h2>React</h2>
+        <h3><a href="https://facebook.github.io/react/" title="React">facebook.github.io/react/</a></h3>
+      </div>
     </section>
     <section class="slide shout shout--react">
       <div><h2>developed by Facebook</h2></div>
@@ -147,17 +157,236 @@
       </div>
     </section>
     <section class="slide shout shout--react">
-      <div><h2>Everything is a component</h2></div>
+      <div><h2>On data changes, the whole DOM is rerendered.</h2></div>
+    </section>
+    <section class="slide shout shout--react">
+      <div>
+        <h2>90s style refresh!</h2>
+        <h3 class="next">But … that's slow!</h3>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
+      <div><h2>Introducing:<br>Virtual DOM</h2></div>
     </section>
     <section class="slide">
       <div>
-
+        <ul>
+          <li>Render virtual DOM</li>
+          <li class="next">Render real DOM</li>
+          <li class="next">Data changes</li>
+          <li class="next">Rerender virtual DOM</li>
+          <li class="next">Update real DOM</li>
+        </ul>
+        <h2 class="next">Minimal DOM operations</h2>
       </div>
     </section>
-    <section class="slide list">
+    <section class="slide shout shout--white">
+      <div><h2>Side effect: Server side rendering</h2></div>
+    </section>
+    <section class="slide shout shout--react">
+      <div><h2>Everything is a component</h2></div>
+    </section>
+    <section class="slide code">
       <div>
-        <h2>Safe to use?</h2>
-        <h2 class="next">It's been battle tested at:</h2>
+        <pre>
+          <code><mark class="comment">/** @jsx React.DOM */</mark></code>
+          <code>var Hello = React.createClass({</code>
+          <code>  render: function() {</code>
+          <code>    return &lt;div&gt;Hello {this.props.name}&lt;/div&gt;;</code>
+          <code>  }</code>
+          <code>});</code>
+          <code>  </code>
+          <code>React.renderComponent(&lt;Hello name="HH.js" /&gt;, document.body);</code>
+        </pre>
+      </div>
+    </section>
+    <section class="slide code">
+      <div>
+        <pre>
+          <code><mark class="comment">/** @jsx React.DOM */</mark></code>
+          <code><mark class="important">var Hello = React.createClass</mark>({</code>
+          <code>  render: function() {</code>
+          <code>    return &lt;div&gt;Hello {this.props.name}&lt;/div&gt;;</code>
+          <code>  }</code>
+          <code>});</code>
+          <code>  </code>
+          <code>React.renderComponent(&lt;Hello name="HH.js" /&gt;, document.body);</code>
+        </pre>
+      </div>
+    </section>
+    <section class="slide code">
+      <div>
+        <pre>
+          <code><mark class="comment">/** @jsx React.DOM */</mark></code>
+          <code>var Hello = React.createClass({</code>
+          <code>  render: function() {</code>
+          <code>    return &lt;div&gt;Hello {this.props.name}&lt;/div&gt;;</code>
+          <code>  }</code>
+          <code>});</code>
+          <code>  </code>
+          <code><mark class="important">React.renderComponent(&lt;Hello name="HH.js" /&gt;, document.body);</mark></code>
+        </pre>
+      </div>
+    </section>
+    <section class="slide code">
+      <div>
+        <pre>
+          <code><mark class="comment">/** @jsx React.DOM */</mark></code>
+          <code>var Hello = React.createClass({</code>
+          <code>  <mark class="important">render</mark>: function() {</code>
+          <code>    return &lt;div&gt;Hello {this.props.name}&lt;/div&gt;;</code>
+          <code>  }</code>
+          <code>});</code>
+          <code>  </code>
+          <code>React.renderComponent(&lt;Hello name="HH.js" /&gt;, document.body);</code>
+        </pre>
+      </div>
+    </section>
+    <section class="slide code">
+      <div>
+        <pre>
+          <code><mark class="comment">/** @jsx React.DOM */</mark></code>
+          <code>var Hello = React.createClass({</code>
+          <code>  render: function() {</code>
+          <code>    <mark class="important">return &lt;div&gt;Hello {this.props.name}&lt;/div&gt;;</mark></code>
+          <code>  }</code>
+          <code>});</code>
+          <code>  </code>
+          <code>React.renderComponent(&lt;Hello name="HH.js" /&gt;, document.body);</code>
+        </pre>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
+      <div><h2>Wait, whats' that?</h2></div>
+    </section>
+    <section class="slide shout shout--react">
+      <div>
+        <h2>Introducing:<br>JSX</h2>
+        <h3 class="next">Write JavaScript with HTML syntax.</h3>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
+      <div>
+        <h2>Introducing: JSX</h2>
+        <h3>It is not required.</h3>
+      </div>
+    </section>
+    <section class="slide code">
+      <div>
+        <pre>
+          <code><mark class="comment">/** @jsx React.DOM */</mark></code>
+          <code>var Hello = React.createClass({</code>
+          <code>  render: function() {</code>
+          <code>    <mark>return &lt;div&gt;Hello {this.props.name}&lt;/div&gt;;</mark></code>
+          <code>  }</code>
+          <code>});</code>
+          <code>  </code>
+          <code>React.renderComponent(<mark>&lt;Hello name="HH.js" /&gt;</mark>, document.body);</code>
+        </pre>
+      </div>
+    </section>
+    <section class="slide code">
+      <div>
+        <pre>
+          <code><mark class="comment">/** @jsx React.DOM */</mark></code>
+          <code>var Hello = React.createClass({<mark>displayName: 'Hello',</mark></code>
+          <code>  render: function() {</code>
+          <code>    <mark>return React.DOM.div(null, "Hello ", this.props.name);</mark></code>
+          <code>  }</code>
+          <code>});</code>
+          <code>  </code>
+          <code>React.renderComponent(<mark>Hello({name: "HH.js"})</mark>, document.body);</code>
+        </pre>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
+      <div>
+        <h2>Components are just functions</h2>
+        <h3 class="next">The output should be the same at any time</h3>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
+      <div><h2>Components have a lifecycle</h2></div>
+    </section>
+    <section class="slide lifecycle">
+      <div>
+        <div class="lifecycle__step lifecycle__step--right">getDefaultProps()</div>
+        <div class="next lifecycle__step lifecycle__step--right">getInitialState()</div>
+        <div class="next lifecycle__step lifecycle__step--left">componentWillMount()</div>
+        <div class="next lifecycle__step lifecycle__step--left">componentDidMount()</div>
+        <div class="next lifecycle__step lifecycle__step--right">componentWillReceiveProps()</div>
+        <div class="next lifecycle__step lifecycle__step--right">shouldComponentUpdate()</div>
+        <div class="next lifecycle__step lifecycle__step--right">componentWillUpdate()</div>
+        <div class="next lifecycle__step lifecycle__step--right">componentDidUpdate()</div>
+        <div class="next lifecycle__step lifecycle__step--left">componentWillUnmount()</div>
+      </div>
+      <style type="text/css" media="screen">
+        .lifecycle__step {
+          color: #656d78;
+        }
+        .lifecycle__step--left {
+          width: 51.5%;
+          text-align: right;
+        }
+        .lifecycle__step--left:after {
+          content: '';
+          display: inline-block;
+          background: #ccd1d9;
+          border: 1px solid #aab2bd;
+          height: 2em;
+          width: 2em;
+          border-radius: 50%;
+          vertical-align: middle;
+          margin-left: 1em;
+        }
+        .lifecycle__step--right {
+          width: 53%;
+          text-align: left;
+          margin-left: 47%;
+        }
+        .lifecycle__step--right:before {
+          content: '';
+          display: inline-block;
+          background: #ccd1d9;
+          height: 1em;
+          width: 1em;
+          border-radius: 50%;
+          vertical-align: middle;
+          margin-right: 1em;
+        }
+      </style>
+    </section>
+    <section class="slide shout shout--react">
+      <div><h2>Components have props and state</h2></div>
+    </section>
+    <section class="slide">
+      <div>
+        <p>Immutable <code>props</code> get passed in from parents.</p>
+        <p>Changeable <code>state</code> kept in a component.</p>
+        <p><code>state</code> can be passed to child components.</p>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
+      <div><h2>What about separation of concerns?</h2></div>
+    </section>
+    <section class="slide shout shout--react">
+      <div>
+        <h2>Not separating concerns.</h2>
+        <h3 class="next">React only fulfills the View.</h3>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
+      <div>
+        <h2>Not separating concerns.</h2>
+        <h3>Markup and layout depend on each other.</h3>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
+      <div><h2>Safe to use?</h2></div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>It's been battle tested at:</h2>
         <ul>
           <li class="next">Instagram web</li>
           <li class="next">Facebook (some parts)</li>
@@ -179,6 +408,9 @@
       <div>
         <h2>Flux</h2>
       </div>
+    </section>
+    <section class="slide shout shout--flux">
+      <div><h2>It's not a framework.<br>It's a concept.</h2></div>
     </section>
 
     <!--  build:YEOMAN-GENERATOR-PLACEHOLDER -->
