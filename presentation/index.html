@@ -5,11 +5,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=792, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic|Playfair+Display' rel='stylesheet' type='text/css'>
-
     <link rel="stylesheet" href="bower_components/shower-bright/styles/screen.css">
     <style>
+      @font-face {
+        font-family: 'Lato';
+        src: url(fonts/lato-regular-webfont.woff) format('woff');
+      }
+      @font-face {
+        font-family: 'Lato';
+        src: url(fonts/lato-italic-webfont.woff) format('woff');
+        font-style: italic;
+      }
+      @font-face {
+        font-family: 'Lato';
+        src: url(fonts/lato-bold-webfont.woff) format('woff');
+        font-weight: 700;
+      }
+      @font-face {
+        font-family: 'Lato';
+        src: url(fonts/lato-bolditalic-webfont.woff) format('woff');
+        font-weight: 700;
+        font-style: italic;
+      }
+      @font-face {
+        font-family: 'Playfair Display';
+        src: url(fonts/playfairdisplay-regular-webfont.woff) format('woff');
+      }
       body, .slide h2 {
         font-family: "Lato", sans-serif;
       }
@@ -157,7 +178,7 @@
       </div>
     </section>
     <section class="slide shout shout--react">
-      <div><h2>On data changes, the whole DOM is rerendered.</h2></div>
+      <div><h2>On data changes,<br>the whole DOM<br>is rerendered.</h2></div>
     </section>
     <section class="slide shout shout--react">
       <div>
@@ -181,7 +202,7 @@
       </div>
     </section>
     <section class="slide shout shout--white">
-      <div><h2>Side effect: Server side rendering</h2></div>
+      <div><h2>Side effect:<br>Server side rendering</h2></div>
     </section>
     <section class="slide shout shout--react">
       <div><h2>Everything is a component</h2></div>
@@ -301,12 +322,12 @@
     </section>
     <section class="slide shout shout--react">
       <div>
-        <h2>Components are just functions</h2>
+        <h2>Components<br>are just functions</h2>
         <h3 class="next">The output should be the same at any time</h3>
       </div>
     </section>
     <section class="slide shout shout--react">
-      <div><h2>Components have a lifecycle</h2></div>
+      <div><h2>Components<br>have a lifecycle</h2></div>
     </section>
     <section class="slide lifecycle">
       <div>
@@ -357,7 +378,7 @@
       </style>
     </section>
     <section class="slide shout shout--react">
-      <div><h2>Components have props and state</h2></div>
+      <div><h2>Components<br>have props and state</h2></div>
     </section>
     <section class="slide">
       <div>
@@ -371,13 +392,13 @@
     </section>
     <section class="slide shout shout--react">
       <div>
-        <h2>Not separating concerns.</h2>
+        <h2>Separating concerns.</h2>
         <h3 class="next">React only fulfills the View.</h3>
       </div>
     </section>
     <section class="slide shout shout--react">
       <div>
-        <h2>Not separating concerns.</h2>
+        <h2>Separating concerns.</h2>
         <h3>Markup and layout depend on each other.</h3>
       </div>
     </section>
