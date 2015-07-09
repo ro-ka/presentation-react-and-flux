@@ -57,9 +57,16 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
-      .slide.cover.cover--react h2, .slide.cover.cover--flux h2,
-      .slide.cover.cover--react h3, .slide.cover.cover--flux h3,
-      .slide.cover.cover--react a, .slide.cover.cover--flux a {
+      .slide.shout.shout--react-native, .slide.cover.cover--react-native {
+        background: #1A6B89;
+        background-image: url('images/react-native.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .slide.cover.cover--react h2, .slide.cover.cover--react-native h2, .slide.cover.cover--flux h2,
+      .slide.cover.cover--react h3, .slide.cover.cover--react-native h3, .slide.cover.cover--flux h3,
+      .slide.cover.cover--react a, .slide.cover.cover--react-native a, .slide.cover.cover--flux a {
         font-family: "Playfair Display", serif;
         margin: 0 0 0;
         color: #FFF;
@@ -424,6 +431,70 @@
           </a>
         </h2>
       </div>
+    </section>
+    <section class="slide cover cover--react-native">
+      <div>
+        <h2>React Native</h2>
+        <h3 class="next"><a href="https://facebook.github.io/react-native/" title="React Native" target="_blank">facebook.github.io/react-native/</a></h3>
+      </div>
+    </section>
+    <section class="slide shout shout--react-native">
+      <div><h2>Learn once, write anywhere</h2></div>
+    </section>
+    <section class="slide shout shout--react-native">
+      <div><h2>Build native applications with JavaScript</h2></div>
+    </section>
+    <section class="slide shout shout--react-native">
+      <div><h2>Use the standard platform components</h2></div>
+    </section>
+    <section class="slide code">
+      <div>
+        <pre>
+          <code>var React = require('react-native');</code>
+          <code>var { TabBarIOS, NavigatorIOS } = React;</code>
+          <code>var App = React.createClass({</code>
+          <code>  render: function() {return (</code>
+          <code>    &lt;TabBarIOS&gt;</code>
+          <code>      &lt;TabBarIOS.Item title="React Native" selected={true}&gt;</code>
+          <code>        &lt;NavigatorIOS initialRoute={{ title: 'React Native' }} /&gt;</code>
+          <code>      &lt;/TabBarIOS.Item&gt;</code>
+          <code>    &lt;/TabBarIOS&gt;</code>
+          <code>  );}</code>
+          <code>});</code>
+        </pre>
+      </div>
+    </section>
+    <section class="slide code">
+      <div>
+        <pre>
+          <code>var React = require('react-native');</code>
+          <code>var { <mark class="important">TabBarIOS, NavigatorIOS</mark> } = React;</code>
+          <code>var App = React.createClass({</code>
+          <code>  render: function() {return (</code>
+          <code>    &lt;TabBarIOS&gt;</code>
+          <code>      &lt;TabBarIOS.Item title="React Native" selected={true}&gt;</code>
+          <code>        &lt;NavigatorIOS initialRoute={{ title: 'React Native' }} /&gt;</code>
+          <code>      &lt;/TabBarIOS.Item&gt;</code>
+          <code>    &lt;/TabBarIOS&gt;</code>
+          <code>  );}</code>
+          <code>});</code>
+        </pre>
+      </div>
+    </section>
+    <section class="slide shout shout--react-native">
+      <div><h2>Fast development with hot module reloading</h2></div>
+    </section>
+    <section class="slide shout shout--react-native">
+      <div><h2><a href="https://youtu.be/7rDsRXj9-cU?t=22m14s" target="_blank" title="A Deep Dive into React Native ">https://youtu.be/7rDsRXj9-cU?t=22m14s</a></h2></div>
+    </section>
+    <section class="slide shout shout--react-native">
+      <div><h2>Currently only for iOS</h2></div>
+    </section>
+    <section class="slide shout shout--react-native">
+      <div><h2>Android?</h2><h3 class="next"><a href="http://www.reactnativeandroid.com/" title="React Native Android" target="_blank">www.reactnativeandroid.com</a></h3></div>
+    </section>
+    <section class="slide cover cover--react-native">
+      <div><iframe src="http://www.reactnativeandroid.com/" width="1024" height="682"></iframe></div>
     </section>
     <section class="slide cover cover--flux">
       <div>
