@@ -91,7 +91,7 @@
       .slide.shout h2 {
         font-size: 3em;
       }
-      .slide.shout a {
+      .slide.shout a, .slide.shout code {
         color: #fff;
       }
       .slide.shout h3, .slide.cover h3 {
@@ -334,6 +334,33 @@
       </div>
     </section>
     <section class="slide shout shout--react">
+      <div><h2>What about separation of concerns?</h2></div>
+    </section>
+    <section class="slide shout shout--react">
+      <div>
+        <h2>Separating concerns.</h2>
+        <h3 class="next">React only fulfills the View.</h3>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
+      <div>
+        <h2>Separating concerns.</h2>
+        <h3>Markup and layout depend on each other.</h3>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
+      <div>
+        <h2>Separating concerns.</h2>
+        <h3>Not separating technologies.</h3>
+      </div>
+    </section>
+    <section class="slide shout shout--react">
+      <div><h2>One way data flow</h2></div>
+    </section>
+    <section class="slide cover flux-schema">
+      <div><img src="images/one-way-data-flow.svg" alt=""></div>
+    </section>
+    <section class="slide shout shout--react">
       <div><h2>Components<br>have a lifecycle</h2></div>
     </section>
     <section class="slide lifecycle">
@@ -385,29 +412,25 @@
       </style>
     </section>
     <section class="slide shout shout--react">
-      <div><h2>Components<br>have props and state</h2></div>
+      <div><h2>Components<br>have <code>props</code> and <code>state</code></h2></div>
     </section>
-    <section class="slide">
-      <div>
-        <p>Immutable <code>props</code> get passed in from parents.</p>
-        <p>Changeable <code>state</code> kept in a component.</p>
-        <p><code>state</code> can be passed to child components.</p>
-      </div>
+    <section class="slide cover flux-schema">
+      <div><img src="images/state-and-props-1.svg" alt=""></div>
     </section>
     <section class="slide shout shout--react">
-      <div><h2>What about separation of concerns?</h2></div>
+      <div><h2>Changeable <code>state</code> kept in a component</h2></div>
+    </section>
+    <section class="slide cover flux-schema">
+      <div><img src="images/state-and-props-2.svg" alt=""></div>
+    </section>
+    <section class="slide cover flux-schema">
+      <div><img src="images/state-and-props-3.svg" alt=""></div>
     </section>
     <section class="slide shout shout--react">
-      <div>
-        <h2>Separating concerns.</h2>
-        <h3 class="next">React only fulfills the View.</h3>
-      </div>
+      <div><h2><code>state</code> can be passed to child components and is available as  <code>prop</code></h2></div>
     </section>
-    <section class="slide shout shout--react">
-      <div>
-        <h2>Separating concerns.</h2>
-        <h3>Markup and layout depend on each other.</h3>
-      </div>
+    <section class="slide cover flux-schema">
+      <div><img src="images/state-and-props-final.svg" alt=""></div>
     </section>
     <section class="slide shout shout--react">
       <div><h2>Safe to use?</h2></div>
