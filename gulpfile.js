@@ -2,7 +2,8 @@
 // generated on 2014-10-20 using generator-shower 0.2.2
 
 var gulp = require('gulp'),
-  $ = require('gulp-load-plugins')();
+  livereload = require('gulp-livereload'),
+  ghPages = require('gulp-gh-pages');
 
 gulp.task('connect', function () {
   var connect = require('connect');
@@ -26,7 +27,7 @@ gulp.task('serve', ['connect'], function () {
 });
 
 gulp.task('watch', ['connect', 'serve'], function () {
-  var server = $.livereload();
+  var server = livereload();
 
   // watch for changes
   gulp.watch([
@@ -37,4 +38,9 @@ gulp.task('watch', ['connect', 'serve'], function () {
   ]).on('change', function (file) {
     server.changed(file.path);
   });
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./presentation/**/*')
+    .pipe(ghPages());
 });
